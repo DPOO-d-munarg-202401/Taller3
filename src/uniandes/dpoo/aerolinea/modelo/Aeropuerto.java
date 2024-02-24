@@ -46,4 +46,13 @@ public class Aeropuerto
         return ( int )Math.round( distancia );
     }
 
+	private double getLatitud() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	private double getLongitud() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

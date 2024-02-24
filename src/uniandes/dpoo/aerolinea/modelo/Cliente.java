@@ -1,8 +1,8 @@
 package uniandes.dpoo.aerolinea.modelo;
 
-public class Vuelo {
+public class Cliente {
 
-	public String getFecha() {
+	public String getIdentificador() {
 		// TODO Auto-generated method stub
 		return null;
 	}

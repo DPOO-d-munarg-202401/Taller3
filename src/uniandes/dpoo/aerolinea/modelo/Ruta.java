@@ -34,5 +34,10 @@ public class Ruta
         return horas;
     }
 
+	public String getCodigoRuta() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
     
 }
