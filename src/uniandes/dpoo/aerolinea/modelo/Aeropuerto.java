@@ -3,7 +3,7 @@ package uniandes.dpoo.aerolinea.modelo;
 import java.util.HashSet;
 import java.util.Set;
 
-import uniandes.dpoo.aerolinea.exceptions.AeropuertoDuplicadoException;
+//import uniandes.dpoo.aerolinea.exceptions.AeropuertoDuplicadoException;
 
 /**
  * Esta clase encapsula la información sobre los aeropuertos e implementa algunas operaciones relacionadas con la ubicación geográfica de los aeropuertos.
@@ -12,7 +12,7 @@ import uniandes.dpoo.aerolinea.exceptions.AeropuertoDuplicadoException;
  */
 public class Aeropuerto
 {
-    // TODO completar
+	// completado
     
 
     /**
@@ -28,6 +28,25 @@ public class Aeropuerto
      * @param aeropuerto2
      * @return La distancia en kilómetros entre los puntos
      */
+	private String nombre;
+	private String codigo;
+	private String nombreCiudad;
+	private double latitud;
+	private double longuitud;
+	public static final int RADIO_TERRESTRE = 6371;
+	
+	public Aeropuerto (String nombre,String codigo,String nombreCiudad,
+			double latitud,double longuitud) {
+		this.nombre=nombre;
+		this.codigo=codigo;
+		this.nombreCiudad=nombreCiudad;
+		this.latitud=latitud;
+		this.longuitud=longuitud;
+		
+		
+	}
+	
+	public Set<String> codigosUsados = new HashSet<String>();
     public static int calcularDistancia( Aeropuerto aeropuerto1, Aeropuerto aeropuerto2 )
     {
         // Convertir los ángulos a radianes para facilitar las operaciones trigonométricas
@@ -47,12 +66,33 @@ public class Aeropuerto
     }
 
 	private double getLatitud() {
-		// TODO Auto-generated method stub
-		return 0;
+		return latitud;
 	}
 	private double getLongitud() {
-		// TODO Auto-generated method stub
-		return 0;
+		return longuitud;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNombreCiudad() {
+		return nombreCiudad;
+	}
+
+	public void setNombreCiudad(String nombreCiudad) {
+		this.nombreCiudad = nombreCiudad;
+	}
 }
