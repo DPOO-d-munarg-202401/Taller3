@@ -10,16 +10,15 @@ public interface Tiquete {
     String getCodigo();
     int getTarifa();
     boolean isUsado();
-    void marcarComoUsado();
     Vuelo getVuelo();
     Cliente getCliente();
-
-public class TiqueteImpl implements Tiquete {
-    private String codigo;
-    private int tarifa;
-    private boolean usado;
-    private Vuelo vuelo;
-    private Cliente clienteComprador;
+    
+    public class TiqueteImpl implements Tiquete {
+        private String codigo;
+        private int tarifa;
+        private boolean usado;
+        private Vuelo vuelo;
+        private Cliente clienteComprador;
     
     public TiqueteImpl(String codigo, int tarifa, boolean usado, Vuelo vuelo, Cliente clienteComprador) {
         this.codigo = codigo;
@@ -52,21 +51,7 @@ public class TiqueteImpl implements Tiquete {
 	    public Cliente getCliente() {
 	    	return clienteComprador; 
 	    	}
-	}
-
-	public class generadorTiquetes{
-		public Set<String> codigos = new HashSet<String>();
-		
-		public Tiquete generarTiquete(Vuelo vuelo,Cliente Cliente,int tarifa) {
-			return null;
-		}
-		
-		public void regustrarTiquete(Tiquete unTiquete) {
-			
-		}
-		public boolean validarTiquete(String codigoTiquete) {
-			return true;
-		}
-	}
-			
+    }
 }
+
+			
