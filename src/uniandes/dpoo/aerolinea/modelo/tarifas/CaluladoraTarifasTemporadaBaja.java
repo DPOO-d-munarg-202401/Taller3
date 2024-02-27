@@ -2,7 +2,7 @@ package uniandes.dpoo.aerolinea.modelo.tarifas;
 
 import uniandes.dpoo.aerolinea.modelo.Ruta;
 import uniandes.dpoo.aerolinea.modelo.Vuelo;
-import uniandes.dpoo.aerolinea.modelo.clientes.Cliente;
+import uniandes.dpoo.aerolinea.modelo.cliente.Cliente;
 
 public class CaluladoraTarifasTemporadaBaja implements CalculadoraTarifas {
 	int COSTO_PORKM_NATURAL= 600;

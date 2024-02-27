@@ -187,7 +187,7 @@ public class PersistenciaTiquetesJson implements IPersistenciaTiquetes
             Tiquete nuevoTiquete = new Tiquete( codigoTiquete, elVuelo, elCliente, tarifa );
             if( tiqueteUsado )
                 nuevoTiquete.marcarComoUsado( );
-            GeneradorTiquetes.registrarTiquete( nuevoTiquete );
+            GeneradorTiquetes.regustrarTiquete( nuevoTiquete );
         }
     }
 
@@ -208,7 +208,7 @@ public class PersistenciaTiquetesJson implements IPersistenciaTiquetes
             jTiquete.put( CODIGO_RUTA, tiquete.getVuelo( ).getRuta( ).getCodigoRuta( ) );
             jTiquete.put( FECHA, tiquete.getVuelo( ).getFecha( ) );
             jTiquete.put( TARIFA, tiquete.getTarifa( ) );
-            jTiquete.put( USADO, tiquete.esUsado( ) );
+            jTiquete.put( USADO, tiquete.isUsado( ) );
             jTiquete.put( CLIENTE, tiquete.getCliente( ).getIdentificador( ) );
 
             jTiquetes.put( jTiquete );

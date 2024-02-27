@@ -1,14 +1,39 @@
 package uniandes.dpoo.aerolinea.modelo.cliente;
-
 import org.json.JSONObject;
-
-import uniandes.dpoo.aerolinea.modelo.clientes.Cliente;
 
 /**
  * Esta clase se usa para representar a los clientes de la aerolínea que son empresas
  */
 public class ClienteCorporativo extends Cliente
 {
+	private String nombreEmpresa;
+	private int tamanoEmpresa;
+	
+	String CORPORATIVO = "Corporativo";
+	int GRANDE = 1;
+	int MEDIANA = 2;
+	int PEQUENA = 3;
+	
+	public ClienteCorporativo (String nombreEmpresa, int tamanoEmpresa) {
+		this.nombreEmpresa=nombreEmpresa;
+		this.tamanoEmpresa=tamanoEmpresa;
+	}
+	 
+	
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+	public int getTamanoEmpresa() {
+		return tamanoEmpresa;
+	}
+	
+	public String getIdentificador() {
+		return null;
+	}
+
+	
+	
+	
     // TODO completar
     
 

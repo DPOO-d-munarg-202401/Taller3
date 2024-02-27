@@ -1,8 +1,9 @@
 package uniandes.dpoo.aerolinea.modelo.tarifas;
+import uniandes.dpoo.aerolinea.modelo.cliente.Cliente;
 
 import uniandes.dpoo.aerolinea.modelo.Ruta;
 import uniandes.dpoo.aerolinea.modelo.Vuelo;
-import uniandes.dpoo.aerolinea.modelo.clientes.Cliente;
+
 
 public abstract interface CalculadoraTarifas {
 	double IMPUESTO = 0.28;
