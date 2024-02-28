@@ -8,17 +8,17 @@ import java.util.Set;
 
 
 
-public class GeneradorTiquetes implements Tiquete{
+public class GeneradorTiquetes{
 	public Set<String> codigos = new HashSet<String>();
 	
 	public GeneradorTiquetes generarTiquete(Vuelo vuelo,Cliente Cliente,int tarifa) {
 		return null;
 	}
 	
-	public void regustrarTiquete(GeneradorTiquetes unTiquete) {
+	public static  void registrarTiquete(Tiquete nuevoTiquete) {
 		
 	}
-	public boolean validarTiquete(String codigoTiquete) {
+	public static boolean validarTiquete(String codigoTiquete) {
 		return true;
 	}
 

@@ -9,10 +9,10 @@ public class ClienteCorporativo extends Cliente
 	private String nombreEmpresa;
 	private int tamanoEmpresa;
 	
-	String CORPORATIVO = "Corporativo";
-	int GRANDE = 1;
-	int MEDIANA = 2;
-	int PEQUENA = 3;
+	public String CORPORATIVO = "Corporativo";
+	public int GRANDE = 1;
+	public int MEDIANA = 2;
+	public int PEQUENA = 3;
 	
 	public ClienteCorporativo (String nombreEmpresa, int tamanoEmpresa) {
 		this.nombreEmpresa=nombreEmpresa;
@@ -21,18 +21,19 @@ public class ClienteCorporativo extends Cliente
 	 
 	
 	public String getNombreEmpresa() {
-		return nombreEmpresa;
+		return this.nombreEmpresa;
 	}
 	public int getTamanoEmpresa() {
-		return tamanoEmpresa;
+		return this.tamanoEmpresa;
 	}
 	
 	public String getIdentificador() {
-		return null;
+		return "identificador";
 	}
 
-	
-	
+	public String getTipoCliente() {
+		return this.CORPORATIVO;
+	}
 	
     // TODO completar
     
@@ -65,3 +66,5 @@ public class ClienteCorporativo extends Cliente
         return jobject;
     }
 }
+
+

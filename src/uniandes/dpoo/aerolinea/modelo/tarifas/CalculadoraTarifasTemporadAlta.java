@@ -4,9 +4,9 @@ package uniandes.dpoo.aerolinea.modelo.tarifas;
 	import uniandes.dpoo.aerolinea.modelo.cliente.Cliente;
 	
 public class CalculadoraTarifasTemporadAlta implements CalculadoraTarifas {
-	int COSTO_POR_KM=1000;
+	protected int COSTO_POR_KM=1000;
 		
-	public int calcularTarifa(Vuelo vuelo, Cliente clisente) {
+	public int calcularTarifa(Vuelo vuelo, Cliente cliente) {
 		return 0;
 	}
 

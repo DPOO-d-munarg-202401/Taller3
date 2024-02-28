@@ -1,10 +1,13 @@
 package uniandes.dpoo.aerolinea.modelo;
+import java.util.Collection;
 
+import uniandes.dpoo.aerolinea.tiquetes.Tiquete;
 public class Vuelo {
 
 	private String fecha;
 	private Ruta ruta;
 	private Avion avion ;
+	public Collection<Tiquete> tiquetes;
 	
 	public Vuelo(Ruta ruta, String fecha, Avion avion) {
         this.fecha = fecha;
@@ -12,13 +15,19 @@ public class Vuelo {
         this.avion = avion; 
     }
 	public String getFecha() {
-		return fecha;
+		return this.fecha;
 	}
 	public Ruta getRuta() {
-		return ruta;
+		return this.ruta;
 	}
 	public Avion getAvion() {
-		return avion;
+		return this.avion;
 	}
+	public Collection<Tiquete> getTiquetes(){
+		return this.tiquetes;
+		
+	}
+	
+	
 
 }

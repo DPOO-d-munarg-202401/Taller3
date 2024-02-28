@@ -9,15 +9,11 @@ public class Avion {
 		this.capacidad=capacidad;
 	}
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 	public int getCapacidad() {
-		return capacidad;
+		return this.capacidad;
 	}
-	public void setNombre(String nombre) {
-		this.nombre= nombre;
-	}
-	public void setCapacidad(int capacidad) {
-		this.capacidad= capacidad;
-	}
+
+	
 }

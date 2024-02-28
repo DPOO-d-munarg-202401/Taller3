@@ -6,7 +6,7 @@ import uniandes.dpoo.aerolinea.modelo.Vuelo;
 
 
 public abstract interface CalculadoraTarifas {
-	double IMPUESTO = 0.28;
+	public double IMPUESTO = 0.28;
 	
 	public int calcularTarifa(Vuelo vuelo, Cliente clisente);
 	

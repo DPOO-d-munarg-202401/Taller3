@@ -187,7 +187,7 @@ public class PersistenciaTiquetesJson implements IPersistenciaTiquetes
             Tiquete nuevoTiquete = new Tiquete( codigoTiquete, elVuelo, elCliente, tarifa );
             if( tiqueteUsado )
                 nuevoTiquete.marcarComoUsado( );
-            GeneradorTiquetes.regustrarTiquete( nuevoTiquete );
+            GeneradorTiquetes.registrarTiquete( nuevoTiquete );
         }
     }
 

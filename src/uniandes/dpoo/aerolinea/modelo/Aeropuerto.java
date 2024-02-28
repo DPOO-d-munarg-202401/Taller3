@@ -33,7 +33,7 @@ public class Aeropuerto
 	private String nombreCiudad;
 	private double latitud;
 	private double longuitud;
-	public static final int RADIO_TERRESTRE = 6371;
+	private static final int RADIO_TERRESTRE = 6371;
 	
 	public Aeropuerto (String nombre,String codigo,String nombreCiudad,
 			double latitud,double longuitud) {
@@ -66,14 +66,14 @@ public class Aeropuerto
     }
 
 	private double getLatitud() {
-		return latitud;
+		return this.latitud;
 	}
 	private double getLongitud() {
-		return longuitud;
+		return this.longuitud;
 	}
 
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 
 	public void setNombre(String nombre) {
@@ -81,7 +81,7 @@ public class Aeropuerto
 	}
 
 	public String getCodigo() {
-		return codigo;
+		return this.codigo;
 	}
 
 	public void setCodigo(String codigo) {
@@ -89,7 +89,7 @@ public class Aeropuerto
 	}
 
 	public String getNombreCiudad() {
-		return nombreCiudad;
+		return this.nombreCiudad;
 	}
 
 	public void setNombreCiudad(String nombreCiudad) {

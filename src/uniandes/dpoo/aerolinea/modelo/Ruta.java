@@ -46,22 +46,49 @@ public class Ruta
         int horas = Integer.parseInt( horaCompleta ) / 100;
         return horas;
     }
+    
+    public int getDuracion() {
+    	
+    	int horasSalida = getHoras(horaSalida);
+		int horasLlegada = getHoras(horaLlegada);
+		int minutosSalida = getMinutos(horaSalida);
+		int minutosLlegada = getMinutos(horaLlegada);
+		
+		int totalMinutosSalida = (horasSalida*60) + minutosSalida;
+		int totalMinutosLlegada = (horasLlegada*60) + minutosLlegada;
+		
+		int minutosTotal = 0;
+		if (horasSalida < horasLlegada) {
+			
+			minutosTotal = totalMinutosLlegada - totalMinutosSalida; 
+		}
+		else if (horasLlegada < horasSalida) {
+			
+			int Llegada = (24*60) + totalMinutosLlegada;
+			minutosTotal = Llegada - totalMinutosSalida;
+		}
+		else if (this.horaSalida == this.horaLlegada) {
+			
+			minutosTotal = 24*60;
+		}
+		return minutosTotal;
+    }
 
     public String getHoraSalida() {
-		return horaSalida;
+		return this.horaSalida;
 	}
     public String getHoraLlegada() {
-		return horaLlegada;
+		return this.horaLlegada;
 	}
     public String getCodigoRuta() {
-		return codigoRuta;
+		return this.codigoRuta;
 	}
     
     public Aeropuerto getOrigen() {
-		return origen ;
+		return this.origen ;
 	}
     public Aeropuerto getDestino() {
-		return destino;
+		return this.destino;
 	}
     
 }
